@@ -77,6 +77,29 @@
   transform: translateY(-3px);
 }
 
+/* Correct styling for the Empik link button when the anchor itself has .btn-primary */
+.book-detail-info a.btn-primary,
+.book-detail-info a.btn-primary:link,
+.book-detail-info a.btn-primary:visited {
+  display: inline-block;
+  background-color: var(--kolor-smoka-zielony);
+  color: var(--kolor-bialy-neutralny);
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 6px 18px rgba(118, 200, 147, 0.25);
+}
+
+.book-detail-info a.btn-primary:hover,
+.book-detail-info a.btn-primary:focus {
+  background-color: var(--kolor-trawy-ciemny);
+  transform: translateY(-3px);
+  color: var(--kolor-bialy-neutralny);
+  text-decoration: none;
+}
+
 /* Responsywność dla telefonów */
 @media (max-width: 768px) {
   .book-detail-card {

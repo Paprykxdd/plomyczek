@@ -40,8 +40,14 @@
 }
 
 .mission-content h2 {
-  color: var(--kolor-smoka-zielony);
+  color: var(--kolor-trawy-ciemny);
   font-size: 2.2rem;
+  font-family: var(--font-heading);
+  /* pastel heading style */
+  background: linear-gradient(90deg, #ffdbe6 0%, #d8e9ff 50%, #eaffef 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   margin-bottom: 1.5rem;
 }
 
@@ -119,7 +125,7 @@
 /* Sekcja Kontakt */
 .contact-section {
   text-align: center;
-  background-color: var(--kolor-trawy-ciemny);
+  background-color: var(--kolor-smoka-zielony);
   color: #fff;
   padding: 4rem 2rem;
   border-radius: 20px;

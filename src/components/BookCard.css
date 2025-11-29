@@ -52,3 +52,26 @@
   color: #757575;
   margin: 0;
 }
+
+/* Buy button linking to Empik */
+.buy-button {
+  display: inline-block;
+  margin-top: 0.9rem;
+  background-color: var(--kolor-smoka-zielony);
+  color: var(--kolor-bialy-neutralny);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 14px rgba(118,200,147,0.18);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.buy-button:hover,
+.buy-button:focus {
+  background-color: var(--kolor-trawy-ciemny);
+  transform: translateY(-3px);
+  color: var(--kolor-bialy-neutralny);
+  text-decoration: none;
+}

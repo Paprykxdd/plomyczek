@@ -15,6 +15,7 @@ function ProductGrid() {
             author={book.author}
             // Upewniamy się, że przekazujemy WŁAŚCIWĄ daną: book.coverUrl
             coverUrl={book.coverUrl}
+            empikUrl={book.empikUrl}
           />
         ))}
       </div>

@@ -1,0 +1,133 @@
+.plomyczek-showcase {
+  /* Brak tła karty, brak cieni. Czysta przestrzeń. */
+  padding: 6rem 2rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.showcase-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; /* Wyśrodkowanie w pionie */
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+/* --- TREŚĆ TEKSTOWA --- */
+.showcase-content {
+  flex: 1; /* Zajmuje połowę szerokości */
+  /* Brak ramek, brak tła - styl otwarty */
+}
+
+.showcase-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  /* use global heading font and pastel gradient */
+  font-family: var(--font-heading);
+  background: linear-gradient(90deg, #ffddec 0%, #d6e7ff 50%, #dfffe6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.showcase-subtitle {
+  font-size: 1.5rem;
+  color: var(--kolor-trawy-ciemny);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.showcase-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--kolor-tekstu-ciemny);
+  margin-bottom: 1.5rem;
+  max-width: 90%; /* Żeby wiersze nie były za długie */
+}
+
+/* --- PRZYCISKI --- */
+.showcase-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background-color: var(--kolor-smoka-zielony);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 15px rgba(118, 200, 147, 0.4); /* Delikatny cień tylko pod przyciskiem */
+}
+
+.btn-primary:hover {
+  background-color: var(--kolor-trawy-ciemny);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  border: 2px solid var(--kolor-tekstu-ciemny);
+  color: var(--kolor-tekstu-ciemny);
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--kolor-tekstu-ciemny);
+  color: #fff;
+}
+
+/* --- OBRAZEK --- */
+.showcase-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.showcase-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  /* Zaokrąglamy rogi, ale nie robimy ramki */
+  border-radius: 30px; 
+  /* Opcjonalnie: bardzo delikatny cień pod samym zdjęciem, nie pod sekcją */
+  /* filter: drop-shadow(20px 20px 0px var(--kolor-nieba-blekitny)); */
+  transform: rotate(2deg); /* Lekkie przechylenie dla dynamiki */
+  transition: transform 0.3s ease;
+}
+
+.showcase-image:hover img {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* Responsywność */
+@media (max-width: 900px) {
+  .showcase-container {
+    flex-direction: column-reverse; /* Obrazek na górze na telefonach? A może na dole? */
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .showcase-text p {
+    max-width: 100%;
+  }
+
+  .showcase-actions {
+    justify-content: center;
+  }
+  
+  .showcase-title {
+    font-size: 2.5rem;
+  }
+}

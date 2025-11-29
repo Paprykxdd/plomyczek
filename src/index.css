@@ -6,19 +6,41 @@
   --kolor-tekstu-ciemny: #2c3e50;      /* Główny kolor tekstu */
   --kolor-bialy-neutralny: #ffffff;
   --kolor-szary-tlo: #f8f9fa;
+  /* Typography */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   /* Używamy naszych nowych zmiennych */
   background-color: var(--kolor-nieba-blekitny);
   color: var(--kolor-tekstu-ciemny);
+}
+
+/* Headings — pastel/soft gradient and nice font for all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Pastel gradient styling for H2 specifically — accessible fallback color */
+h2 {
+  background: linear-gradient(90deg, #ffd1dc 0%, #c7e7ff 50%, #e6fbdc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* use the gradient */
+  /* Fallback for browsers that do not support background-clip */
+  -webkit-text-fill-color: #3a5a40;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1, h2, h3, h4, h5, h6 { transition: none !important; }
 }
 
 /* Globalny reset dla box-sizing - bardzo dobra praktyka! */

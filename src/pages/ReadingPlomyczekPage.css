@@ -12,6 +12,7 @@
 .hashtag-title {
   font-size: 3.5rem;
   color: var(--kolor-trawy-ciemny);
+  font-family: var(--font-heading);
   font-weight: 800;
   margin-bottom: 1rem;
   letter-spacing: -1px;
@@ -37,9 +38,14 @@
 }
 
 .reading-story h2 {
-  color: var(--kolor-smoka-zielony);
+  font-family: var(--font-heading);
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  /* pastel gradient for h2 inside reading story */
+  background: linear-gradient(90deg, #ffdbe6 0%, #d8e9ff 50%, #eaffef 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .reading-story p {

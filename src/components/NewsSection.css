@@ -11,7 +11,12 @@
 .news-title {
   text-align: center;
   font-size: 2.5rem;
-  color: var(--kolor-trawy-ciemny);
+  font-family: var(--font-heading);
+  /* pastel gradient */
+  background: linear-gradient(90deg, #ffe0f0 0%, #dff0ff 50%, #eaffea 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   margin-bottom: 3rem;
   position: relative;
   z-index: 2; /* Tekst musi być nad chmurami */

@@ -33,8 +33,10 @@ function BookDetailPage() {
           <h2 className="book-detail-author">{book.author}</h2>
           <p className="book-detail-price">{book.price}</p>
           <p className="book-detail-description">{book.description}</p>
-          <button className="add-to-cart-button">
-            Dodaj do koszyka
+          <button className="btn-buy-now">
+            <a href={book.empikUrl} target="_blank" rel="noopener noreferrer">
+              Kup teraz na Empik.com
+            </a>
           </button>
         </div>
       </div>

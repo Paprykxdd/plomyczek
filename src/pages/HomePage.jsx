@@ -3,6 +3,7 @@ import React from 'react';
 import FeaturedBooks from '../components/FeaturedBooks';
 import Hero from '../components/Hero';
 import NewsSection from '../components/NewsSection';
+import PlomyczekShowcase from '../components/PlomyczekShowcase';
 
 function HomePage() {
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       </div>
 
     <Hero />
+    <PlomyczekShowcase />
     <NewsSection />
     <FeaturedBooks />
     
